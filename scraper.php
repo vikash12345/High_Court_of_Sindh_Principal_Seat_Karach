@@ -21,7 +21,7 @@ $link = file_get_html($Newlink);
     $matter = $element->find('td[8]',0)->plaintext;
     $last = $element->find('td[9]',0)->plaintext;
     $nextdate = $element->find('td[10]',0)->plaintext;
-    echo link = $element->find('td[10]/a',0)->src;
+    echo $link = $element->find('td[10]/a',0)->src;
     echo "----------------------------------";
     
    

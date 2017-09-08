@@ -39,7 +39,7 @@ scraperwiki::save_sqlite(array('num'), array('numberingofcase' => $num,
                                              'nextdate' => $nextdate, 
                                              'href' => $href,    
                                              'profilelink' => $profilelink, 
-                                             'link' => $link
+                                             'link' => $Newlink
                                              ));
 
   }

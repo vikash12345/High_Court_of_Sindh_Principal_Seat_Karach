@@ -10,7 +10,7 @@ for($i = 1; $i < 2; $i++)
 {
 $Newlink = $BaseLink . $i. '&per-page=15';
 $link = file_get_html($Newlink);  
-  foreach($link->find("//*[@id='w1-container']/table/thead") as $element){
+  foreach($link->find("//[@id='w1-container']/table/thead") as $element){
   echo $element;
   }
 

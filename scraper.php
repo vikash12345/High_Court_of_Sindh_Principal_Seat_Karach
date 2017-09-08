@@ -10,7 +10,9 @@ for($i = 1; $i < 2; $i++)
 {
 $Newlink = $BaseLink . $i. '&per-page=15';
 $link = file_get_html($Newlink);  
+  if($link){
   foreach($link->find("//[@id='w1-container']/table/tbody/tr") as $element){
+    
     $num        = $element->find('td[1]',0)->plaintext;
     echo '<br\>'.$num;
     $casename    = $element->find('td[2]',0)->plaintext;
@@ -25,9 +27,9 @@ $link = file_get_html($Newlink);
     $link = $element->find('td[11]/a',0)->href;
     $profilelink = 'http://202.61.43.40:8082'.$link;
 
-scraperwiki::save_sqlite(array('num'), array('num' => '$num', 'casename' => '$casename'));
+scraperwiki::save_sqlite(array('num'), array('num' => $num, 'casename' => $casename));
 
-   
+  }
   }
 
 }

@@ -11,7 +11,7 @@ for($i = 1; $i < 2; $i++)
 $Newlink = $BaseLink . $i. '&per-page=15';
 $link = file_get_html($Newlink);  
   foreach($link->find("//[@id='w1-container']/table/tbody") as $element){
-  $num = $element->find(./td[1],0)->plaintext;
+  $num = $element->find(/td[1],0)->plaintext;
     echo  $num;
   }
 

@@ -24,10 +24,23 @@ $link = file_get_html($Newlink);
     $matter = $element->find('td[8]',0)->plaintext;
     $last = $element->find('td[9]',0)->plaintext;
     $nextdate = $element->find('td[10]',0)->plaintext;
-    $link = $element->find('td[11]/a',0)->href;
+    $href = $element->find('td[11]/a',0)->href;
     $profilelink = 'http://202.61.43.40:8082'.$link;
 
-scraperwiki::save_sqlite(array('num'), array('num' => $num, 'casename' => $casename));
+scraperwiki::save_sqlite(array('num'), array('numberingofcase' => $num,
+                                             'casename' => $casename,
+                                             'caseno' => $caseno, 
+                                             'casey' => $casey, 
+                                             'bench' => $bench, 
+                                             'court' => $court, 
+                                             'casetitle' => $casetitle, 
+                                             'matter' => $matter, 
+                                             'last' => $last, 
+                                             'nextdate' => $nextdate, 
+                                             'href ' => $href,    
+                                             'profilelink ' => $profilelink, 
+                                             'link' => $link
+                                             ));
 
   }
   }

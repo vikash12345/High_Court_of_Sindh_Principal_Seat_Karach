@@ -12,6 +12,7 @@ $Newlink = $BaseLink . $i. '&per-page=15';
 $link = file_get_html($Newlink);  
   foreach($link->find("//[@id='w1-container']/table/tbody/tr") as $element){
     $num        = $element->find('td[1]',0)->plaintext;
+    echo '<br\>'.$num;
     $casename    = $element->find('td[2]',0)->plaintext;
     $caseno        = $element->find('td[3]',0)->plaintext;
     $casey = $element->find('td[4]',0)->plaintext;
@@ -21,10 +22,11 @@ $link = file_get_html($Newlink);
     $matter = $element->find('td[8]',0)->plaintext;
     $last = $element->find('td[9]',0)->plaintext;
     $nextdate = $element->find('td[10]',0)->plaintext;
-     $link = $element->find('td[11]/a',0)->href;
-   echo $profilelink = 'http://202.61.43.40:8082'.$link;
-    echo "----------------------------------";
-    
+    $link = $element->find('td[11]/a',0)->href;
+    $profilelink = 'http://202.61.43.40:8082'.$link;
+
+scraperwiki::save_sqlite(array('num'), array('num' => '$num', 'casename' => '$casename'));
+
    
   }
 

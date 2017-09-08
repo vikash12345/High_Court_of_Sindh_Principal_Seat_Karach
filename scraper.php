@@ -27,7 +27,7 @@ $link = file_get_html($Newlink);
     $href = $element->find('td[11]/a',0)->href;
     $profilelink = 'http://202.61.43.40:8082'.$link;
 
-scraperwiki::save_sqlite(array('num'), array('numberingofcase' => $num,
+scraperwiki::save_sqlite(array('num'), array('num' => $num,
                                              'casename' => $casename,
                                              'caseno' => $caseno, 
                                              'casey' => $casey, 

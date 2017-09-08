@@ -11,8 +11,8 @@ for($i = 1; $i < 2; $i++)
 $Newlink = $BaseLink . $i. '&per-page=15';
 $link = file_get_html($Newlink);  
   foreach($link->find("//[@id='w1-container']/table/tbody/tr") as $element){
-  echo  $num        = $element->find('td[1]',0)->plaintext;
-    $casename    = $element->find('td[2]',0)->plaintext;
+   $num        = $element->find('td[1]',0)->plaintext;
+   echo  $casename    = $element->find('td[2]',0)->plaintext;
     $caseno        = $element->find('td[3]',0)->plaintext;
     $casey = $element->find('td[4]',0)->plaintext;
     $bench = $element->find('td[5]',0)->plaintext;

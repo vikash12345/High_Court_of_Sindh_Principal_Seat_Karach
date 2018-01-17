@@ -14,8 +14,8 @@ $text = str_replace(',', '', $loopnumberforpagintion);
 $paginations = $text  / 15 + 1;
 $loop =  (int)$paginations;
 
-
-for($i = 1; $i <= $loop; $i++)
+//$loop
+for($i = 1; $i <= 2; $i++)
 {
 	$Newlink = 'http://202.61.43.40:8082/cases/search-result?CasesSearch%5BCASENAMECODE%5D=&CasesSearch%5BCASENO%5D=&CasesSearch%5BCASEYEAR%5D=&CasesSearch%5BCIRCUITCODE%5D=1&CasesSearch%5BMATTERCODE%5D=&CasesSearch%5BPARTY%5D=&CasesSearch%5BGOVT_AGENCY_CODE%5D=&CasesSearch%5BFIRNO%5D=&CasesSearch%5BFIRYEAR%5D=&CasesSearch%5BPOLICESTATIONCODE%5D=&CasesSearch%5BADVOCATECODE%5D=&CasesSearch%5BisPending%5D=3&page=' .$i. '&per-page=15';
 	
